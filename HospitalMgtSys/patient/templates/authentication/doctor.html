@@ -2,6 +2,13 @@
 
 {% block content %}
 
-<h1>Doctor</h1>
-
+<div>
+    <h1>Docotr</h1>
+    {% for i in doctors %}
+        <tr>
+            <td>{{i.name}}</td>
+        </tr>
+        <hr>
+    {% endfor %}
+</div>
 {% endblock content %}

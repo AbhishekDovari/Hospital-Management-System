@@ -130,9 +130,9 @@ LOGOUT_REDIRECT_URL = 'login'
 
 LOGIN_REDIRECT_URL = 'dashboard.html' 
 
-AUTH_USER_MODEL = 'patient.UserProfile'
+# AUTH_USER_MODEL = 'patient.UserProfile'
 
-ACCOUNT_SIGNUP_FORM_CLASS = 'user_app.forms.SignupForm'
+ACCOUNT_SIGNUP_FORM_CLASS = 'patient.forms.SignupForm'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
