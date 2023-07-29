@@ -1,22 +1,18 @@
-{% extends 'authentication/dashboard.html' %}
+{% extends 'authentication/base.html'%}
 
-{% block content %}
-
-<div>
-    <table>
-        <th>Patient Name</th>
-        <th>Phone No.</th>
-        <th>Email</th>
-        
+        {% block content %}
+        <div >
+        <h1>Hello, {{request.user}}</h1>
+        <h1 style="text-align: center;">Doctors' Information</h1>
+        <div class="card">
         {% for patient in patients %}
-            <tr>
-                <td>{{patient.name}}</td>
-                <td>{{patient.phone}}</td>
-                <td>{{patient.email}}</td>
-            </tr>
-        {% endfor %}
-
-    </table>
-</div>
-
-{% endblock content %}
+                <a href="{% url 'patient_pro' patient.pk%}">
+                    <div class="pateint-cards">
+                        <h3><i class="fa-solid fa-hospital-user" style="color: :white;font-size: 2.5rem"></i></h6>
+                        <h3>Name: {{patient.first_name}} {{patient.last_name}}</h6>
+                        <h3>Email: {{patient.email}}</h6>
+                    </div>
+                </a>
+        {% endfor %}    
+        </div>        </div>
+        {% endblock %}

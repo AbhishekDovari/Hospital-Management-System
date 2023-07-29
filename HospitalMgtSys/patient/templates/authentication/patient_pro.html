@@ -1,0 +1,23 @@
+{% extends 'authentication/base.html' %}
+
+{% block content %}
+
+<div class="pateint-pro">
+	<div class="left">
+		<h3>Username : {{user.username}}</h3>
+		<h3>Name : {{user.first_name}} {{user.last_name}}</h3>
+		<h3>Email : {{user.email}}</h3>
+		{% if request.user.id == pk %}
+		<button class="button">EditProfile</button>
+		{% endif %}
+		{% if group == "doctor" %}
+			<a href="{% url 'treatment' %}"><button>Edit Treatment</button></a>
+			<button>Edit Prescription</button>
+		{% endif %}
+		
+	</div>
+	
+</div>
+
+
+{% endblock %}

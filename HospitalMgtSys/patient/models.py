@@ -1,8 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Patient(models.Model):
-    name = models.CharField(max_length=256, null=True)
+    first_name = models.CharField(max_length=256, null=True)
+    last_name = models.CharField(max_length=256, null=True)
     phone = models.CharField(max_length=256, null=True)
     email = models.CharField(max_length=256, null=True)
     date_created = models.DateTimeField(auto_now_add = True)
@@ -22,8 +24,10 @@ class Doctor(models.Model):
     
 
 class Treatment(models.Model):
-    patient = models.ForeignKey(Patient, null=True, on_delete=models.SET_NULL)
-    doctor = models.ForeignKey(Doctor, null=True, on_delete=models.SET_NULL)
+    # lp = User.objects.filter(groups = 2)
+    # ld = User.objects.filter(groups = 3)
+    # patient = models.ForeignKey(lp, null=True, on_delete=models.SET_NULL)
+    # doctor = models.ForeignKey(ld, null=True, on_delete=models.SET_NULL)
     present_treatment = models.CharField(max_length=256, null=True)
     start_date =models.DateTimeField()
     duration = models.DurationField()
@@ -32,3 +36,8 @@ class Treatment(models.Model):
 
     def __str__(self):
         return self.present_treatment
+
+# class appointment(models.Model):
+
+
+

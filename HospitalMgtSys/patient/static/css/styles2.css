@@ -1,0 +1,125 @@
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* width: 95vw; */
+  
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  margin-inline: auto;
+  box-shadow: 0px 0px 1px  solid black;
+}
+
+.navbar-options{
+  background-color: rgba(65, 68, 206, 0.466);
+  border-radius: 10px;
+  border: 5px 5px 5px solid black;
+}
+
+.navbar-options ul{
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+}
+
+.navbar-options li{
+  padding: 1.5vw;
+}
+
+.navbar-options li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.navbar-options li a:hover{
+  color: white;
+  text-decoration:  underline solid white;
+}
+
+.navbar-header h1{
+/*  margin: auto;*/
+  text-align: center;
+  justify-content: center;
+}
+
+.navbar-header{
+  font-style: italic;
+  color: rgba(65, 68, 206, 0.466);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.patient-details {
+  margin-inline: auto;
+  border-radius: 10px;
+/*  background-color: white;*/
+}
+
+.patient-details .info h1{
+  text-align: center;
+}
+
+.card {
+  margin: 15px;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+/*  width: ;*/
+}
+
+.card a{
+  background-color: rgba(65, 68, 206, 0.466);
+  width: 30vw;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.patient-cards {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul li i{
+  color: white;
+  font-size: 1.5rem;
+}
+
+/*field {
+  display: flex;
+  justify-content: flex-start;
+
+}
+label {
+  color: grey;
+  margin: 10px;
+}*/
+
+
+.patient-pro {
+  width: 40vw;
+}
+
+
+.form-field #id_role {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  margin-inline-end: 150px;
+}
+
+.form-card{
+  justify-content: flex-start;
+  width: 40vw;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(65, 68, 206, 0.466);
+}
